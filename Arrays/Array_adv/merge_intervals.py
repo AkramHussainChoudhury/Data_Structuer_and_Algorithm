@@ -64,7 +64,7 @@ def insert(intervals, newInterval):
             start=min(start,intervals[i].start)
             end=max(end,intervals[i].end)
             merge=True
-        elif i>0 and start>intervals[i-1].end and end < intervals[i].start:
+        elif i>0 and x>intervals[i-1].end and y < intervals[i].start:
             res.append(Interval(x,y))
             res.append(intervals[i])
         else:
